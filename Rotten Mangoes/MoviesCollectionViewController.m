@@ -54,6 +54,13 @@
                 
                 Movie *newMovie = [[Movie alloc] initWithTitle:name andYear:year andRating:rating andReleaseDate:release andCast:cast andImageURL:imageURL];
                 
+                //add link for review page
+                
+                NSString *reviewLink = movie[@"links"][@"reviews"];
+                NSString *reviewLinkWithAPI = [reviewLink stringByAppendingString:@"?apikey=j9fhnct2tp8wu2q9h75kanh9"];
+                
+                newMovie.reviewLink = [NSURL URLWithString:reviewLinkWithAPI];
+                
                 [moviesArray addObject:newMovie];
                 
             }
