@@ -109,18 +109,23 @@
                 
             }
             
+            NSLog(@"Theatres array: %@", self.theatres);
             self.theatres = [NSArray arrayWithArray:tempTheatreArray];
+            
+            for (Theatre *theatre in self.theatres) {
+                [self.mapView addAnnotation:theatre];
+            }
+            
             self.mapLoadedWithTheatres = YES;
             
-            NSLog(@"Theatres array: %@", self.theatres);
             dispatch_async(dispatch_get_main_queue(), ^{
                 
+                NSLog(@"Updating zoom location.");
+                CLLocationCoordinate2D zoomLocation = self.locationManager.locationManager.location.coordinate;
+                MKCoordinateSpan zoomLevel = MKCoordinateSpanMake(3, 3);
+                MKCoordinateRegion region = MKCoordinateRegionMake(zoomLocation, zoomLevel);
                 
-                
-                
-                for (Theatre *theatre in self.theatres) {
-                    [self.mapView addAnnotation:theatre];
-                }
+                [self.mapView setRegion:region animated:YES];
                 
             });
         }
@@ -137,6 +142,10 @@
     annotationView.pinTintColor = [UIColor redColor];
     
     return annotationView;
+}
+
+-(void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation {
+    self.mapLoadedWithTheatres = NO;
 }
 
 @end
