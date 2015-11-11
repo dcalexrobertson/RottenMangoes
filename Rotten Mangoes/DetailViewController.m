@@ -8,6 +8,7 @@
 
 #import "DetailViewController.h"
 #import "ReviewController.h"
+#import "MapViewController.h"
 #import "Movie.h"
 
 @interface DetailViewController ()
@@ -25,6 +26,8 @@
 
 -(void)viewDidLoad {
     
+    [super viewDidLoad];
+    
     self.movieTitle.text = self.movie.title;
     
     self.movieImage.image = self.movie.cachedImage;
@@ -37,8 +40,17 @@
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     
-    ReviewController *controller = [segue destinationViewController];
-    controller.movie = self.movie;
+    if ([segue.identifier isEqualToString:@"reviews"]) {
+        
+        ReviewController *controller = [segue destinationViewController];
+        controller.movie = self.movie;
+        
+    } else if ([segue.identifier isEqualToString:@"map"]) {
+        
+        MapViewController *controller = [segue destinationViewController];
+        controller.movie = self.movie;
+    }
+    
 }
 
 @end

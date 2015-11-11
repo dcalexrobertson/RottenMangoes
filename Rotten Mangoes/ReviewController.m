@@ -23,6 +23,8 @@
 @implementation ReviewController
 
 -(void)viewDidLoad {
+    
+    [super viewDidLoad];
 
     NSURLSession *session = [NSURLSession sharedSession];
     NSURLSessionTask *dataTask = [session dataTaskWithURL:self.movie.reviewLink completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
@@ -35,7 +37,9 @@
             
             self.reviewsArray = [NSMutableArray new];
             
-            for (int i = 0; i < 4; i++) {
+//            NSNumber *totalReviews = reviews[@"total"];
+            
+            for (int i = 0; i < 3; i++) {
                 
                 NSString *quote = reviews[@"reviews"][i][@"quote"];
                 NSString *critic = reviews[@"reviews"][i][@"critic"];
@@ -51,7 +55,6 @@
                 self.reviewLabel1.text = self.reviewsArray[0];
                 self.reviewLabel2.text = self.reviewsArray[1];
                 self.reviewLabel3.text = self.reviewsArray[2];
-                self.reviewLabel4.text = self.reviewsArray[3];
                 
             });
             

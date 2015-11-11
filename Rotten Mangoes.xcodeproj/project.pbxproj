@@ -20,6 +20,12 @@
 		FA883C391BF140EF001E1F6E /* MoviesCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FA883C381BF140EF001E1F6E /* MoviesCollectionViewCell.m */; };
 		FA883C3C1BF14F97001E1F6E /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA883C3B1BF14F97001E1F6E /* DetailViewController.m */; };
 		FA883C3F1BF17C34001E1F6E /* ReviewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA883C3E1BF17C34001E1F6E /* ReviewController.m */; };
+		FA883C411BF2771A001E1F6E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA883C401BF2771A001E1F6E /* MapKit.framework */; };
+		FA883C441BF2775A001E1F6E /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA883C431BF2775A001E1F6E /* MapViewController.m */; };
+		FA883C471BF278B2001E1F6E /* LocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FA883C461BF278B2001E1F6E /* LocationManager.m */; };
+		FA883C491BF28E21001E1F6E /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA883C481BF28E21001E1F6E /* CoreLocation.framework */; };
+		FA883C4C1BF29E6E001E1F6E /* Theatre.m in Sources */ = {isa = PBXBuildFile; fileRef = FA883C4B1BF29E6E001E1F6E /* Theatre.m */; };
+		FA883C4E1BF2B5B1001E1F6E /* Vancouver.gpx in Resources */ = {isa = PBXBuildFile; fileRef = FA883C4D1BF2B5B1001E1F6E /* Vancouver.gpx */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +71,15 @@
 		FA883C3B1BF14F97001E1F6E /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		FA883C3D1BF17C34001E1F6E /* ReviewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReviewController.h; sourceTree = "<group>"; };
 		FA883C3E1BF17C34001E1F6E /* ReviewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReviewController.m; sourceTree = "<group>"; };
+		FA883C401BF2771A001E1F6E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		FA883C421BF27759001E1F6E /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		FA883C431BF2775A001E1F6E /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		FA883C451BF278B2001E1F6E /* LocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationManager.h; sourceTree = "<group>"; };
+		FA883C461BF278B2001E1F6E /* LocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationManager.m; sourceTree = "<group>"; };
+		FA883C481BF28E21001E1F6E /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		FA883C4A1BF29E6E001E1F6E /* Theatre.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Theatre.h; sourceTree = "<group>"; };
+		FA883C4B1BF29E6E001E1F6E /* Theatre.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Theatre.m; sourceTree = "<group>"; };
+		FA883C4D1BF2B5B1001E1F6E /* Vancouver.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = Vancouver.gpx; path = "../../Desktop/W4D4---CoreLocation-master/Vancouver.gpx"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +87,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA883C491BF28E21001E1F6E /* CoreLocation.framework in Frameworks */,
+				FA883C411BF2771A001E1F6E /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,6 +112,9 @@
 		FA883BE81BF10F06001E1F6E = {
 			isa = PBXGroup;
 			children = (
+				FA883C4D1BF2B5B1001E1F6E /* Vancouver.gpx */,
+				FA883C481BF28E21001E1F6E /* CoreLocation.framework */,
+				FA883C401BF2771A001E1F6E /* MapKit.framework */,
 				FA883BF31BF10F06001E1F6E /* Rotten Mangoes */,
 				FA883C101BF10F06001E1F6E /* Rotten MangoesTests */,
 				FA883C1B1BF10F06001E1F6E /* Rotten MangoesUITests */,
@@ -117,12 +137,18 @@
 			children = (
 				FA883C2A1BF11306001E1F6E /* Movie.h */,
 				FA883C2B1BF11306001E1F6E /* Movie.m */,
+				FA883C4A1BF29E6E001E1F6E /* Theatre.h */,
+				FA883C4B1BF29E6E001E1F6E /* Theatre.m */,
+				FA883C451BF278B2001E1F6E /* LocationManager.h */,
+				FA883C461BF278B2001E1F6E /* LocationManager.m */,
 				FA883C341BF13DCF001E1F6E /* MoviesCollectionViewController.h */,
 				FA883C351BF13DCF001E1F6E /* MoviesCollectionViewController.m */,
 				FA883C3A1BF14F97001E1F6E /* DetailViewController.h */,
 				FA883C3B1BF14F97001E1F6E /* DetailViewController.m */,
 				FA883C3D1BF17C34001E1F6E /* ReviewController.h */,
 				FA883C3E1BF17C34001E1F6E /* ReviewController.m */,
+				FA883C421BF27759001E1F6E /* MapViewController.h */,
+				FA883C431BF2775A001E1F6E /* MapViewController.m */,
 				FA883C371BF140EF001E1F6E /* MoviesCollectionViewCell.h */,
 				FA883C381BF140EF001E1F6E /* MoviesCollectionViewCell.m */,
 				FA883BFD1BF10F06001E1F6E /* Main.storyboard */,
@@ -269,6 +295,7 @@
 				FA883C071BF10F06001E1F6E /* LaunchScreen.storyboard in Resources */,
 				FA883C041BF10F06001E1F6E /* Assets.xcassets in Resources */,
 				FA883BFF1BF10F06001E1F6E /* Main.storyboard in Resources */,
+				FA883C4E1BF2B5B1001E1F6E /* Vancouver.gpx in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,8 +323,11 @@
 				FA883C361BF13DCF001E1F6E /* MoviesCollectionViewController.m in Sources */,
 				FA883C021BF10F06001E1F6E /* Rotten_Mangoes.xcdatamodeld in Sources */,
 				FA883C2C1BF11306001E1F6E /* Movie.m in Sources */,
+				FA883C441BF2775A001E1F6E /* MapViewController.m in Sources */,
 				FA883C3F1BF17C34001E1F6E /* ReviewController.m in Sources */,
 				FA883BF91BF10F06001E1F6E /* AppDelegate.m in Sources */,
+				FA883C4C1BF29E6E001E1F6E /* Theatre.m in Sources */,
+				FA883C471BF278B2001E1F6E /* LocationManager.m in Sources */,
 				FA883BF61BF10F06001E1F6E /* main.m in Sources */,
 				FA883C391BF140EF001E1F6E /* MoviesCollectionViewCell.m in Sources */,
 				FA883C3C1BF14F97001E1F6E /* DetailViewController.m in Sources */,
@@ -524,6 +554,7 @@
 				FA883C231BF10F06001E1F6E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FA883C241BF10F06001E1F6E /* Build configuration list for PBXNativeTarget "Rotten MangoesTests" */ = {
 			isa = XCConfigurationList;
@@ -532,6 +563,7 @@
 				FA883C261BF10F06001E1F6E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FA883C271BF10F06001E1F6E /* Build configuration list for PBXNativeTarget "Rotten MangoesUITests" */ = {
 			isa = XCConfigurationList;
@@ -540,6 +572,7 @@
 				FA883C291BF10F06001E1F6E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
