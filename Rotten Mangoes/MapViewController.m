@@ -116,8 +116,9 @@
             dispatch_async(dispatch_get_main_queue(), ^{
                 
                 
+                
+                
                 for (Theatre *theatre in self.theatres) {
-                    
                     [self.mapView addAnnotation:theatre];
                 }
                 
