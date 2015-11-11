@@ -112,12 +112,6 @@
             NSLog(@"Theatres array: %@", self.theatres);
             self.theatres = [NSArray arrayWithArray:tempTheatreArray];
             
-            for (Theatre *theatre in self.theatres) {
-                [self.mapView addAnnotation:theatre];
-            }
-            
-            self.mapLoadedWithTheatres = YES;
-            
             dispatch_async(dispatch_get_main_queue(), ^{
                 
                 NSLog(@"Updating zoom location.");
@@ -126,6 +120,12 @@
                 MKCoordinateRegion region = MKCoordinateRegionMake(zoomLocation, zoomLevel);
                 
                 [self.mapView setRegion:region animated:YES];
+                
+                for (Theatre *theatre in self.theatres) {
+                    [self.mapView addAnnotation:theatre];
+                }
+                
+                self.mapLoadedWithTheatres = YES;
                 
             });
         }
